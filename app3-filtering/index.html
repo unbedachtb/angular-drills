@@ -1,7 +1,13 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<html ng-app="app">
+	<body ng-controller="mainCtrl">
+		<input ng-model="info"></input>
+
+			<button type="button" name="button" ng-click="button(in)"></button>
+		<br>
+		<div ng-repeat="myDat in myData | filter:info">
+		{{myDat}}
+		</div>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
